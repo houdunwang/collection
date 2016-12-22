@@ -1,6 +1,9 @@
 # 集合 
 
 Collection 组件提供一个流畅、方便的封装来操作数据。
+
+> 集合中的数据可以使用数组形式调用也可以使用foreach等循环读取
+
 登录 [GITHUB](https://github.com/houdunwang/mail)  查看源代码
 
 [TOC]
@@ -30,7 +33,22 @@ $collection = $obj->make([1, 2, 3]);
 $collection = collect([1, 2, 3]);
 ```
 
-####集合数据转为数组
+####转换数组
 ```
 $obj->make([1, 2, 3])->toArray();
+```
+
+
+####读取数据
+```
+$collection = Collection::make(['name'=>'后盾人]);
+$collection['name'];
+```
+
+####遍历数据
+```
+$collection = Collection::make([1, 2, 3]);
+foreach($collection as $v){
+	print_r($v);
+}
 ```
