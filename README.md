@@ -33,6 +33,9 @@ $collection = $obj->make([1, 2, 3]);
 $collection = collect([1, 2, 3]);
 ```
 
+使用静态方法创建
+$collection =  \houdunwang\collection\Collection::make([1, 2, 3]);
+
 ####转换数组
 ```
 $obj->make([1, 2, 3])->toArray();
