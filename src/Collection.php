@@ -1,4 +1,5 @@
 <?php namespace houdunwang\collection;
+
 use houdunwang\collection\build\Base;
 
 /**
@@ -24,7 +25,16 @@ class Collection {
 		return call_user_func_array( [ $this->link, $method ], $params );
 	}
 
+	public static function single() {
+		static $link = null;
+		if ( is_null( $link ) ) {
+			$link = new Code();
+		}
+
+		return $link;
+	}
+
 	public static function __callStatic( $name, $arguments ) {
-		return call_user_func_array( [ new static(), $name ], $arguments );
+		return call_user_func_array( [ static::single(), $name ], $arguments );
 	}
 }

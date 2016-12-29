@@ -9,9 +9,10 @@
  * '-------------------------------------------------------------------*/
 namespace houdunwang\collection;
 
-use hdphp\kernel\ServiceFacade;
 
-class CollectionFacade extends ServiceFacade {
+use houdunwang\framework\build\Facade;
+
+class CollectionFacade extends Facade {
 	public static function getFacadeAccessor() {
 		return 'Collection';
 	}
