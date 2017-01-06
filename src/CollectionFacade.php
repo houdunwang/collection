@@ -9,7 +9,6 @@
  * '-------------------------------------------------------------------*/
 namespace houdunwang\collection;
 
-
 use houdunwang\framework\build\Facade;
 
 class CollectionFacade extends Facade {

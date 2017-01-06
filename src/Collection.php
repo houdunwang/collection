@@ -28,7 +28,7 @@ class Collection {
 	public static function single() {
 		static $link = null;
 		if ( is_null( $link ) ) {
-			$link = new Code();
+			$link = new static();
 		}
 
 		return $link;

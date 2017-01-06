@@ -9,7 +9,6 @@
  * '-------------------------------------------------------------------*/
 namespace houdunwang\collection;
 
-
 use houdunwang\framework\build\Provider;
 
 class CollectionProvider extends Provider {
@@ -21,7 +20,7 @@ class CollectionProvider extends Provider {
 	}
 
 	public function register() {
-		$this->app->bind( 'Collection', function ( $app ) {
+		$this->app->bind( 'Collection', function () {
 			return new Collection();
 		} );
 	}
