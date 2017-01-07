@@ -149,21 +149,4 @@ class Base implements \Iterator, \ArrayAccess {
 
 		return $this;
 	}
-
-	/**
-	 * 魔术方法
-	 *
-	 * @param $method
-	 * @param $params
-	 *
-	 * @return mixed
-	 */
-	public function __call( $method, $params ) {
-		static $db = null;
-		if ( is_null( $db ) ) {
-			$db = \Db::connect();
-		}
-
-		return call_user_func_array( [ $db, $method ], $params );
-	}
 }
