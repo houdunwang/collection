@@ -15,17 +15,11 @@ Collection 组件提供一个流畅、方便的封装来操作数据。
 ```
 composer require houdunwang/collection
 ```
-> HDPHP 框架已经内置此组件，无需要安装
-
-####创建对象
-```
-$obj = new \houdunwang\collection\Collection();
-```
 
 ####建立集合
 使用对象创建
 ```
-$collection = $obj->make([1, 2, 3]);
+$collection = Collection::make([1, 2, 3]);
 ```
 
 使用函数创建
@@ -33,12 +27,9 @@ $collection = $obj->make([1, 2, 3]);
 $collection = collect([1, 2, 3]);
 ```
 
-使用静态方法创建
-$collection =  \houdunwang\collection\Collection::make([1, 2, 3]);
-
 ####转换数组
 ```
-$obj->make([1, 2, 3])->toArray();
+Collection::make([1, 2, 3])->toArray();
 ```
 
 
