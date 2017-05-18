@@ -157,7 +157,7 @@ class Base implements \Iterator, \ArrayAccess
     {
         $res = [];
         foreach ($this->items as $k => $v) {
-            if ($v instanceof Base) {
+            if (is_object($v) && method_exists($v, 'toArray')) {
                 $res[] = $v->toArray();
             } else {
                 $res[] = $v;
