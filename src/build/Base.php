@@ -1,5 +1,7 @@
 <?php namespace houdunwang\collection\build;
 
+use houdunwang\page\Page;
+
 /**
  * 模型多数据集合
  * Class Collection
@@ -179,5 +181,15 @@ class Base implements \Iterator, \ArrayAccess
         $this->items = $data;
 
         return $this;
+    }
+
+    /**
+     * 前台显示页码样式
+     *
+     * @return mixed
+     */
+    public function links()
+    {
+        return Page::show();
     }
 }
