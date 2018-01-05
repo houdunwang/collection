@@ -190,6 +190,6 @@ class Base implements \Iterator, \ArrayAccess
      */
     public function links()
     {
-        return Page::show();
+        return Page::single();
     }
 }
